@@ -61,7 +61,7 @@ def write_comment(post_path, comment, comment_no):
 
   if comment.has_key("message_tags"):
     for tag in comment["message_tags"]:
-      temp = temp.replace(tag["name"], "")
+      temp = temp.replace("".join(tag["name"].split()), "")
     if not temp:
       return False
 
