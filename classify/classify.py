@@ -25,10 +25,9 @@ def main():
 
   os.mkdir(DEST_PATH, 0755)
  
-  while True:
-    childdirs = [int(childdir) for childdir in os.listdir(SOURCE_PATH)]
-    childdirs = sorted(childdirs)
-    for childdir in childdirs:
+  childdirs = [int(childdir) for childdir in os.listdir(SOURCE_PATH)]
+  childdirs = sorted(childdirs)
+  for childdir in childdirs:
       print "Post " + str(childdir) + ":"
 
       COMMENTS_SOURCE_DIR = SOURCE_PATH + "/" + str(childdir) + "/comments"
